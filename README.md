@@ -10,6 +10,13 @@
 
 ## Configuration
 > Two variables need to be created in the Workspace - Variables page
-  - key_name This is the actual name of the PEM key in EC2 - Kay Pairs
+  - key_name This is the actual name of the PEM key in EC2 - Key Pairs page
   - key_contents  Assuming you downloaded the key_name and placed it in your .ssh folder, this is the actual contents.  Mark this secure, as it is a private key
+>
+
+## Environment
+> Three Environment variables need to be created in the Workspace, essentially from your ~/.aws/credentials file in the Variables page, Environment Section.  Be sure to mark your Key and secret "sensitive" in the UI
+  - AWS_DEFAULT_REGION The region name, e.g. us-west-2
+  - AWS_ACCESS_KEY_ID  from ~/.aws/credentials, the Key ID value
+  - AWS_SECRET_ACCESS_KEY from ~/.aws/credentials, Secret Key Value
 >
