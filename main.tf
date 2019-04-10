@@ -3,7 +3,9 @@ provider "aws" {
 }
 
 ## variables
-variable "key_name" {}
+variable "key_name" {
+  default=""
+}
 ## In TFE, it is no longer a file, but the actual contents of the file (which the file function performs on OSS)
 variable "key_contents" {}
 
