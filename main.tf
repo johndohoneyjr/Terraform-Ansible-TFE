@@ -4,7 +4,9 @@ provider "aws" {
 
 ## variables
 variable "key_name" {
+   default="id_rsa"
 }
+
 ## In TFE, it is no longer a file, but the actual contents of the file (which the file function performs on OSS)
 variable "key_contents" {}
 
