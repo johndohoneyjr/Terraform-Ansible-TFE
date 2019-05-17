@@ -42,8 +42,8 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_security_group" "example" {
-  name        = "Capital Group Demo"
-  description = "Demo for CG"
+  name        = "Ansible with TFE Demo"
+  description = "Demo showing IaC and CM"
 
   ingress {
     from_port   = 22
