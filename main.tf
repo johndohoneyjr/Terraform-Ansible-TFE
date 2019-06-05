@@ -3,6 +3,15 @@ provider "aws" {
 }
 
 ## variables
+
+variable "github_repo" {
+   default="https://github.com/johndohoneyjr/ansible.git"
+}
+
+variable "ansible_playbook" {
+   default="httpd.yml"
+}
+
 variable "key_name" {
    default="id_rsa"
 }
@@ -27,9 +36,9 @@ resource "aws_instance" "example" {
       "sudo apt -y update",
       "sudo apt -y install ansible",
       "cd /home/ubuntu/",
-      "git clone https://github.com/johndohoneyjr/ansible.git",
+      "git clone ${var.github_repo}",
       "cd /home/ubuntu/ansible",
-      "ansible-playbook httpd.yml"
+      "ansible-playbook ${var.ansible_playbook}"
     ]
 
     connection {
