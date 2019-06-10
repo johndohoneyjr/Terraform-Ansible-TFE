@@ -42,6 +42,7 @@ resource "aws_instance" "example" {
     ]
 
     connection {
+      host        = "${aws_instance.example.public_ip}"
       type        = "ssh"
       private_key = "${var.key_contents}" 
       user        = "ubuntu"
